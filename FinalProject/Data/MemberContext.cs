@@ -12,6 +12,6 @@ namespace FinalProject.Data
 
     }
 
-    public DbSet<MemberInfo> Info {get; set;}
+    public DbSet<info> Info {get; set;}
   }
 }

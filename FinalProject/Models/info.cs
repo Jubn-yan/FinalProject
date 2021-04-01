@@ -3,7 +3,7 @@ using System;
 namespace FinalProject.Models
 {
 
-  public class MemberInfo
+  public class info
     {
         public int ID {get; set;}
 
