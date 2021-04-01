@@ -18,5 +18,10 @@ namespace FinalProject.Controllers
         _logger = logger;
         _ctx = ctx;
       }
+
+      public IActionResult Get()
+      {
+          return Ok(_ctx.Info.ToList());
+      }
     }
 }

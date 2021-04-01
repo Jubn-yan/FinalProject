@@ -13,5 +13,35 @@ namespace FinalProject.Data
     }
 
     public DbSet<info> Info {get; set;}
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.Entity<info>().HasData(
+          new info
+          {
+              ID = 1,
+              FullName = "Michael Ahlers",
+              CollegeProgram = "IT",
+              YearInProgram = "Sophmore",
+              Birthdate = new DateTime(1990, 05, 12)
+          },
+          new info
+          {
+              ID = 2,
+              FullName = "Josh Anness",
+              CollegeProgram = "IT",
+              YearInProgram = "Sophmore",
+              Birthdate = new DateTime(1995, 10, 15)
+          },
+          new info
+          {
+              ID = 3,
+              FullName = "Michael Ahlers",
+              CollegeProgram = "IT",
+              YearInProgram = "Sophmore",
+              Birthdate = new DateTime(1990, 05, 12)
+          }
+        );
+    }
   }
 }
