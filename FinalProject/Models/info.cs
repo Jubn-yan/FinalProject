@@ -5,7 +5,7 @@ namespace FinalProject.Models
 
   public class info
     {
-        public int ID {get; set;}
+        public int? ID {get; set;}
 
         public string FullName {get; set;}
 
