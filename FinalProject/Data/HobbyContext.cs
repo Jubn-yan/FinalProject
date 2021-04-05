@@ -18,7 +18,7 @@ namespace FinalProject.Data
             builder.Entity<Hobby>().HasData(
                 new Hobby
                 {
-                    ID = 1,
+                    Id = 1,
                     FullName = "Michael Ahlers",
                     FavoriteHobby = "Basketball",
                     SecondFavoriteHobby = "Baseball",
@@ -26,7 +26,7 @@ namespace FinalProject.Data
                 },
                 new Hobby
                 {
-                    ID = 2,
+                    Id = 2,
                     FullName = "Josh Anness",
                     FavoriteHobby = "Fishing",
                     SecondFavoriteHobby = "Basketball",

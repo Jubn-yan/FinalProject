@@ -16,10 +16,6 @@ namespace FinalProject.Controllers
             _logger = logger;
             _ctx = ctx;
         }
-
-        /*public IActionResult GetAction()
-        {
-            return Ok(_ctx.Hobbies.ToList());
-        }*/
+        
     }
 }
