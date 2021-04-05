@@ -1,6 +1,7 @@
 using FinalProject.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using FinalProject.Data;
 
 namespace FinalProject.Controllers
 {
@@ -15,5 +16,10 @@ namespace FinalProject.Controllers
             _logger = logger;
             _ctx = ctx;
         }
+
+        /*public IActionResult GetAction()
+        {
+            return Ok(_ctx.Hobbies.ToList());
+        }*/
     }
 }
