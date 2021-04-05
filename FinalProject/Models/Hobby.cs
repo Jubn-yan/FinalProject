@@ -1,6 +1,7 @@
+using System;
 namespace FinalProject.Models
 {
-    public class HobbyContext
+    public class Hobby
     {
         public int Id { get; set; }
         public string FullName { get; set; }

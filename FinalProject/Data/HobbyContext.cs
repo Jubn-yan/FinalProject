@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using FinalProject.Models;
+using System;
 
 namespace FinalProject.Data
 {
@@ -8,5 +10,7 @@ namespace FinalProject.Data
         {
 
         }
+
+        public DbSet<Hobby> Hobbies { get; set;}
     }
 }
