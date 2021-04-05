@@ -30,6 +30,8 @@ namespace FinalProject
             services.AddControllers(); 
             services.AddDbContext<MemberContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MemberContext")));
+            services.AddDbContext<HobbyContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("HobbyContext")));
             services.AddSwaggerDocument();
         }
 
