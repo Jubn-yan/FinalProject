@@ -31,7 +31,7 @@ namespace FinalProject.Data
               FullName = "Josh Anness",
               CollegeProgram = "IT",
               YearInProgram = "Sophmore",
-              Birthdate = new DateTime(1995, 10, 15)
+              Birthdate = new DateTime(2002, 01, 13)
           },
           new info
           {
