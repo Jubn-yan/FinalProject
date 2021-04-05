@@ -7,7 +7,7 @@ using FinalProject.Data;
 namespace FinalProject.Controllers
 {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("[controller]")]
     public class MembersInfoController : ControllerBase
     {
       private readonly ILogger<MembersInfoController> _logger;

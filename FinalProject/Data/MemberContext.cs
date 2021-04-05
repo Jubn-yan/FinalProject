@@ -44,4 +44,36 @@ namespace FinalProject.Data
         );
     }
   }
+
+  public class HobbyContext : DbContext
+  {
+
+    public HobbyContext(DbContextOptions options) : base(options)
+    {
+
+    }
+    public DbSet<Hobby> Hobbies { get; set;}
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.Entity<info>().HasData(
+          new Hobby
+          {
+              Id = 1,
+              FullName = "Michael Ahlers",
+              FavoriteHobby = "Basketball",
+              SecondFavoriteHobby = "Baseball",
+              WhyYouLikeThem = "I like staying active"
+          },
+          new Hobby
+          {
+              Id = 2,
+              FullName = "Josh Anness",
+              FavoriteHobby = "Fishing",
+              SecondFavoriteHobby = "Basketball",
+              WhyYouLikeThem = "I like being outside and staying active"
+          }
+        );
+    }
+  }
 }
