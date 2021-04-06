@@ -48,6 +48,7 @@ namespace FinalProject
 
             ctx.Database.Migrate();
             ctx2.Database.Migrate();
+            ctx3.Database.Migrate();
             app.UseOpenApi();
             app.UseSwaggerUi3();
 

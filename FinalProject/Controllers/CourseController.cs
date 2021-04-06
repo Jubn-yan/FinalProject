@@ -11,9 +11,9 @@ namespace FinalProject.Controllers
     public class CourseController : ControllerBase
     {
         private readonly ILogger<CourseController> _logger;
-        private readonly CourseController _ctx;
+        private readonly CourseContext _ctx;
 
-        public CourseController(ILogger<CourseController> logger, CourseController ctx)
+        public CourseController(ILogger<CourseController> logger, CourseContext ctx)
         {
             _logger = logger;
             _ctx = ctx;
@@ -21,12 +21,12 @@ namespace FinalProject.Controllers
         [HttpGet]
         [ApiConventionMethod(typeof(DefaultApiConventions),
             nameof(DefaultApiConventions.Get))]
-        public IActionResult Get(int? ID)
+        public IActionResult Get(int? id)
         {
             if (id == null || id < 1)
-                return Ok(_ctx.Course.Take(5).ToList());
+                return Ok(_ctx.Courses.Take(5).ToList());
             
-            var member = _ctx.Course.Find(id);
+            var member = _ctx.Courses.Find(id);
             if (member == null)
                 return NotFound();
 
@@ -41,7 +41,7 @@ namespace FinalProject.Controllers
             if (course.Id == null || course.Id < 1)
                 return BadRequest("Invalid Member ID.");
 
-            var dbInfo = _ctx.Course.Find(course.Id);
+            var dbInfo = _ctx.Courses.Find(course.Id);
 
             if (dbInfo == null)
                 return NotFound();
@@ -50,7 +50,7 @@ namespace FinalProject.Controllers
             dbInfo.CourseID = course.CourseID;
             dbInfo.CourseName = course.CourseName;
             dbInfo.ProfessorName = course.ProfessorName;
-            _ctx.Course.Update(dbInfo);
+            _ctx.Courses.Update(dbInfo);
             var changes = _ctx.SaveChanges();
 
             if (changes > 0)
@@ -83,7 +83,7 @@ namespace FinalProject.Controllers
             }
 
             course.Id = null;
-            _ctx.Hobbies.Add(hobby);
+            _ctx.Courses.Add(course);
             var changes = _ctx.SaveChanges();
             if (changes > 0)
                 return NoContent();
@@ -94,19 +94,21 @@ namespace FinalProject.Controllers
         [HttpDelete]
         [ApiConventionMethod(typeof(DefaultApiConventions),
             nameof(DefaultApiConventions.Delete))]
-        public IActionResult Delete(int ID)
+        public IActionResult Delete(int? id)
         {
             if (id == null || id < 1)
-            return BadRequest("Invalid member ID.");
+                return BadRequest("Invalid member ID.");
 
-            var member = _ctx.Course.Find(id);
+            var member = _ctx.Courses.Find(id);
             if (member == null)
-            return NotFound();
+                return NotFound();
 
-            _ctx.Course.Remove(member);
+            _ctx.Courses.Remove(member);
             var changes = _ctx.SaveChanges();
             if (changes > 0)
-            return NoContent();
+                return NoContent();
         
             return StatusCode(500, "Please try again later.");
         }
+    }
+}
