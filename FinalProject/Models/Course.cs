@@ -3,7 +3,7 @@ namespace FinalProject.Models
 {
     public class Course
     {
-        public int? ID { get; set; }
+        public int? Id { get; set; }
 
         public string FullName { get; set; }
 
