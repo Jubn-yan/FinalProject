@@ -7,7 +7,7 @@ namespace FinalProject.Data
   public class MemberContext : DbContext
   {
 
-    public MemberContext(DbContextOptions options) : base(options)
+    public MemberContext(DbContextOptions<MemberContext> options) : base(options)
     {
 
     }
@@ -48,7 +48,7 @@ namespace FinalProject.Data
   public class HobbyContext : DbContext
   {
 
-    public HobbyContext(DbContextOptions options) : base(options)
+    public HobbyContext(DbContextOptions<HobbyContext> options) : base(options)
     {
 
     }
@@ -56,7 +56,7 @@ namespace FinalProject.Data
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<info>().HasData(
+        builder.Entity<Hobby>().HasData(
           new Hobby
           {
               Id = 1,

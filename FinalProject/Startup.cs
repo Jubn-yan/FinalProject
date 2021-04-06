@@ -30,11 +30,13 @@ namespace FinalProject
             services.AddControllers(); 
             services.AddDbContext<MemberContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MemberContext")));
+            services.AddDbContext<HobbyContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("HobbyContext")));
             services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MemberContext ctx)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MemberContext ctx, HobbyContext ctx2)
         {
             if (env.IsDevelopment())
             {
@@ -42,6 +44,7 @@ namespace FinalProject
             }
 
             ctx.Database.Migrate();
+            ctx2.Database.Migrate();
             app.UseOpenApi();
             app.UseSwaggerUi3();
 
