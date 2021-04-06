@@ -83,36 +83,36 @@ namespace FinalProject.Data
         {
         }
 
-        public DbSet<Course> Course { get; set; }
+        public DbSet<Course> Courses { get; set; }
         
-        protected override void OnModelCreating(ModelBuilder builder);
+        protected override void OnModelCreating(ModelBuilder builder)
         {
           builder.Entity<Course>().HasData(
             new Course
             {
               Id = 1,
               FullName = "Michael Ahlers",
-              CourseName = "Contemporary Programming"
-              CourseID = "IT3080"
+              CourseName = "Contemporary Programming",
+              CourseID = "IT3080",
               ProfessorName = "Dyllon Dekok"
             },
             new Course
             {
               Id = 2,
               FullName = "Josh Anness",
-              CourseName = "Contemporary Programming"
-              CourseID = "IT3080"
+              CourseName = "Contemporary Programming",
+              CourseID = "IT3080",
               ProfessorName = "Dyllon Dekok"
             },
             new Course
             {
               Id = 3,
               FullName = "Jeffrey Wallace",
-              CourseName = "Database Management II"
-              CourseID = "IT3045"
+              CourseName = "Database Management II",
+              CourseID = "IT3045",
               ProfessorName = "Aditty Mutsuddi"
             }
-          )
+          );
 
         }
     }
