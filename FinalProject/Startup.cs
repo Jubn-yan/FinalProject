@@ -33,10 +33,13 @@ namespace FinalProject
             services.AddDbContext<HobbyContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("HobbyContext")));
             services.AddSwaggerDocument();
+            services.AddDbContext<CourseContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("CourseContext")));
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MemberContext ctx, HobbyContext ctx2)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MemberContext ctx, HobbyContext ctx2, CourseContext ctx3)
         {
             if (env.IsDevelopment())
             {
