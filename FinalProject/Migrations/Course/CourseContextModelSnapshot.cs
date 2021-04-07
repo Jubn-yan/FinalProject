@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace FinalProject.Migrations
+namespace FinalProject.Migrations.Course
 {
-    [DbContext(typeof(MemberContext))]
-    partial class MemberContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(CourseContext))]
+    partial class CourseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -19,53 +19,53 @@ namespace FinalProject.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("FinalProject.Models.info", b =>
+            modelBuilder.Entity("FinalProject.Models.Course", b =>
                 {
-                    b.Property<int?>("ID")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Birthdate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("CourseID")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CollegeProgram")
+                    b.Property<string>("CourseName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("YearInProgram")
+                    b.Property<string>("ProfessorName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
-                    b.ToTable("Info");
+                    b.ToTable("Courses");
 
                     b.HasData(
                         new
                         {
-                            ID = 1,
-                            Birthdate = new DateTime(1990, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CollegeProgram = "IT",
+                            Id = 1,
+                            CourseID = "IT3080",
+                            CourseName = "Contemporary Programming",
                             FullName = "Michael Ahlers",
-                            YearInProgram = "Sophmore"
+                            ProfessorName = "Dyllon Dekok"
                         },
                         new
                         {
-                            ID = 2,
-                            Birthdate = new DateTime(2002, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CollegeProgram = "IT",
+                            Id = 2,
+                            CourseID = "IT3080",
+                            CourseName = "Contemporary Programming",
                             FullName = "Josh Anness",
-                            YearInProgram = "Sophmore"
+                            ProfessorName = "Dyllon Dekok"
                         },
                         new
                         {
-                            ID = 3,
-                            Birthdate = new DateTime(1990, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CollegeProgram = "IT",
-                            FullName = "Michael Ahlers",
-                            YearInProgram = "Sophmore"
+                            Id = 3,
+                            CourseID = "IT3045",
+                            CourseName = "Database Management II",
+                            FullName = "Jeffrey Wallace",
+                            ProfessorName = "Aditty Mutsuddi"
                         });
                 });
 #pragma warning restore 612, 618

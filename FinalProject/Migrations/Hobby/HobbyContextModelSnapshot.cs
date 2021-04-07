@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace FinalProject.Migrations
+namespace FinalProject.Migrations.Hobby
 {
-    [DbContext(typeof(MemberContext))]
-    partial class MemberContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(HobbyContext))]
+    partial class HobbyContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -19,53 +19,45 @@ namespace FinalProject.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("FinalProject.Models.info", b =>
+            modelBuilder.Entity("FinalProject.Models.Hobby", b =>
                 {
-                    b.Property<int?>("ID")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Birthdate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CollegeProgram")
+                    b.Property<string>("FavoriteHobby")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("YearInProgram")
+                    b.Property<string>("SecondFavoriteHobby")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.Property<string>("WhyYouLikeThem")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Info");
+                    b.HasKey("Id");
+
+                    b.ToTable("Hobbies");
 
                     b.HasData(
                         new
                         {
-                            ID = 1,
-                            Birthdate = new DateTime(1990, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CollegeProgram = "IT",
+                            Id = 1,
+                            FavoriteHobby = "Basketball",
                             FullName = "Michael Ahlers",
-                            YearInProgram = "Sophmore"
+                            SecondFavoriteHobby = "Baseball",
+                            WhyYouLikeThem = "I like staying active"
                         },
                         new
                         {
-                            ID = 2,
-                            Birthdate = new DateTime(2002, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CollegeProgram = "IT",
+                            Id = 2,
+                            FavoriteHobby = "Fishing",
                             FullName = "Josh Anness",
-                            YearInProgram = "Sophmore"
-                        },
-                        new
-                        {
-                            ID = 3,
-                            Birthdate = new DateTime(1990, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CollegeProgram = "IT",
-                            FullName = "Michael Ahlers",
-                            YearInProgram = "Sophmore"
+                            SecondFavoriteHobby = "Basketball",
+                            WhyYouLikeThem = "I like being outside and staying active"
                         });
                 });
 #pragma warning restore 612, 618
