@@ -66,6 +66,14 @@ namespace FinalProject.Migrations.Course
                             CourseName = "Database Management II",
                             FullName = "Jeffrey Wallace",
                             ProfessorName = "Aditty Mutsuddi"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CourseID = "IT3045",
+                            CourseName = "Database Management II",
+                            FullName = "Darrion Hoard",
+                            ProfessorName = "Professor D"
                         });
                 });
 #pragma warning restore 612, 618

@@ -31,6 +31,10 @@ namespace FinalProject.Migrations.Hobby
                 table: "Hobbies",
                 columns: new[] { "Id", "FavoriteHobby", "FullName", "SecondFavoriteHobby", "WhyYouLikeThem" },
                 values: new object[] { 2, "Fishing", "Josh Anness", "Basketball", "I like being outside and staying active" });
+            migrationBuilder.InsertData(
+               table: "Hobbies",
+               columns: new[] { "Id", "FavoriteHobby", "FullName", "SecondFavoriteHobby", "WhyYouLikeThem" },
+               values: new object[] { 3, "Cooking", "Darrion Hoard", "Jiu Jitsu", "I love to eat and learning new submission points" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

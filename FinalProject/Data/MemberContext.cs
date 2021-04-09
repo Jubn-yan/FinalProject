@@ -40,6 +40,14 @@ namespace FinalProject.Data
               CollegeProgram = "IT",
               YearInProgram = "Sophmore",
               Birthdate = new DateTime(1990, 05, 12)
+          },
+          new info
+          {
+              ID = 4,
+              FullName = "Darrion Hoard",
+              CollegeProgram = "IT",
+              YearInProgram = "Junior",
+              Birthdate = new DateTime(1994, 07, 13)
           }
         );
     }
@@ -72,6 +80,14 @@ namespace FinalProject.Data
               FavoriteHobby = "Fishing",
               SecondFavoriteHobby = "Basketball",
               WhyYouLikeThem = "I like being outside and staying active"
+          },
+          new Hobby
+          {
+              Id = 3,
+              FullName = "Darrion Hoard",
+              FavoriteHobby = "Cooking",
+              SecondFavoriteHobby = "Jiu Jitsu",
+              WhyYouLikeThem = "I love to eat and learning new submission points"
           }
         );
     }
@@ -111,6 +127,14 @@ namespace FinalProject.Data
               CourseName = "Database Management II",
               CourseID = "IT3045",
               ProfessorName = "Aditty Mutsuddi"
+            },
+            new Course
+            {
+                Id = 4,
+                FullName = "Darrion Hoard",
+                CourseName = "Database Management II",
+                CourseID = "IT3045",
+                ProfessorName = "Professor D"
             }
           );
 

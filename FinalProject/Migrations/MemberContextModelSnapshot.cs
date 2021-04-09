@@ -66,6 +66,14 @@ namespace FinalProject.Migrations
                             CollegeProgram = "IT",
                             FullName = "Michael Ahlers",
                             YearInProgram = "Sophmore"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Birthdate = new DateTime(1994, 7, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CollegeProgram = "IT",
+                            FullName = "Darrion Hoard",
+                            YearInProgram = "Junior"
                         });
                 });
 #pragma warning restore 612, 618
