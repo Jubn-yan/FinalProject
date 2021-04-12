@@ -148,4 +148,52 @@ namespace FinalProject.Data
 
         }
     }
+
+  public class FoodContext : DbContext
+  {
+
+    public FoodContext(DbContextOptions<FoodContext> options) : base(options)
+    {
+
+    }
+    public DbSet<Food> Foods { get; set;}
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.Entity<Food>().HasData(
+          new Food
+          {
+              Id = 1,
+              FullName = "Michael Ahlers",
+              FavoriteFood = "Pizza",
+              SecondFavoriteFood = "Wings",
+              FavoriteMealTime = "Lunch"
+          },
+          new Food
+          {
+              Id = 2,
+              FullName = "Josh Anness",
+              FavoriteFood = "Burger",
+              SecondFavoriteFood = "Pizza",
+              FavoriteMealTime = "Dinner"
+          },
+          new Food
+          {
+              Id = 3,
+              FullName = "Jeffrey Wallace",
+              FavoriteFood = "Cooking",
+              SecondFavoriteFood = "Photography",
+              FavoriteMealTime = "I like exploring"
+          },
+          new Food
+          {
+              Id = 4,
+              FullName = "Darrion Hoard",
+              FavoriteFood = "Cooking",
+              SecondFavoriteFood = "Jiu Jitsu",
+              FavoriteMealTime = "I love to eat and learning new submission points"
+          }
+        );
+    }
+  }
 }
