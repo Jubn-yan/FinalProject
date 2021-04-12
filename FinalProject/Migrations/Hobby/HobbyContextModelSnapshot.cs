@@ -63,6 +63,14 @@ namespace FinalProject.Migrations.Hobby
                         {
                             Id = 3,
                             FavoriteHobby = "Cooking",
+                            FullName = "Jeffrey Wallace",
+                            SecondFavoriteHobby = "Photography",
+                            WhyYouLikeThem = "I like exploring"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            FavoriteHobby = "Cooking",
                             FullName = "Darrion Hoard",
                             SecondFavoriteHobby = "Jiu Jitsu",
                             WhyYouLikeThem = "I love to eat and learning new submission points"
