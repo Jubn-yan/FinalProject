@@ -36,10 +36,10 @@ namespace FinalProject.Data
           new info
           {
               ID = 3,
-              FullName = "Michael Ahlers",
+              FullName = "Jeffrey Wallace",
               CollegeProgram = "IT",
-              YearInProgram = "Sophmore",
-              Birthdate = new DateTime(1990, 05, 12)
+              YearInProgram = "Junior",
+              Birthdate = new DateTime(2000, 08, 28)
           },
           new info
           {
@@ -84,6 +84,14 @@ namespace FinalProject.Data
           new Hobby
           {
               Id = 3,
+              FullName = "Jeffrey Wallace",
+              FavoriteHobby = "Cooking",
+              SecondFavoriteHobby = "Photography",
+              WhyYouLikeThem = "I like exploring"
+          },
+          new Hobby
+          {
+              Id = 4,
               FullName = "Darrion Hoard",
               FavoriteHobby = "Cooking",
               SecondFavoriteHobby = "Jiu Jitsu",
