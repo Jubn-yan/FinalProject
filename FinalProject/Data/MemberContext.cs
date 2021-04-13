@@ -69,9 +69,9 @@ namespace FinalProject.Data
           {
               Id = 1,
               FullName = "Michael Ahlers",
-              FavoriteHobby = "Basketball",
-              SecondFavoriteHobby = "Baseball",
-              WhyYouLikeThem = "I like staying active"
+              FavoriteHobby = "Board Games",
+              SecondFavoriteHobby = "Video Games",
+              WhyYouLikeThem = "Great way to relax"
           },
           new Hobby
           {
@@ -165,9 +165,9 @@ namespace FinalProject.Data
           {
               Id = 1,
               FullName = "Michael Ahlers",
-              FavoriteFood = "Pizza",
+              FavoriteFood = "Sushi",
               SecondFavoriteFood = "Wings",
-              FavoriteMealTime = "Lunch"
+              FavoriteMealTime = "Dinner"
           },
           new Food
           {
