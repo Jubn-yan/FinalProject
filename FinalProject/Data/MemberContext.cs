@@ -181,9 +181,9 @@ namespace FinalProject.Data
           {
               Id = 3,
               FullName = "Jeffrey Wallace",
-              FavoriteFood = "Cooking",
-              SecondFavoriteFood = "Photography",
-              FavoriteMealTime = "I like exploring"
+              FavoriteFood = "Loaded Fries",
+              SecondFavoriteFood = "Salad",
+              FavoriteMealTime = "Dinner"
           },
           new Food
           {
