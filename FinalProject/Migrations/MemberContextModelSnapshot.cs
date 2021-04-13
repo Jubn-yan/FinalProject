@@ -64,7 +64,7 @@ namespace FinalProject.Migrations
                             ID = 3,
                             Birthdate = new DateTime(1990, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CollegeProgram = "IT",
-                            FullName = "Michael Ahlers",
+                            FullName = "Jeffrey Wallace",
                             YearInProgram = "Sophmore"
                         },
                         new
@@ -74,7 +74,16 @@ namespace FinalProject.Migrations
                             CollegeProgram = "IT",
                             FullName = "Darrion Hoard",
                             YearInProgram = "Junior"
-                        });
+                        },
+
+                         new
+                         {
+                             ID = 5,
+                             Birthdate = new DateTime(2000, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                             CollegeProgram = "IT",
+                             FullName = "Bangyan Ju",
+                             YearInProgram = "Junior"
+                         });
                 });
 #pragma warning restore 612, 618
         }

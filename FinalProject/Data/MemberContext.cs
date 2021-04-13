@@ -33,14 +33,14 @@ namespace FinalProject.Data
               YearInProgram = "Sophmore",
               Birthdate = new DateTime(2002, 01, 02)
           },
-          new info
-          {
-              ID = 3,
-              FullName = "Michael Ahlers",
-              CollegeProgram = "IT",
-              YearInProgram = "Sophmore",
-              Birthdate = new DateTime(1990, 05, 12)
-          },
+           new info
+           {
+               ID = 3,
+               FullName = "Jeffrey Wallace",
+               CollegeProgram = "IT",
+               YearInProgram = "Sophmore",
+               Birthdate = new DateTime(2002, 01, 02)
+           },
           new info
           {
               ID = 4,
@@ -48,6 +48,14 @@ namespace FinalProject.Data
               CollegeProgram = "IT",
               YearInProgram = "Junior",
               Birthdate = new DateTime(1994, 07, 13)
+          },
+          new info
+          {
+              ID = 5,
+              FullName = "Bangyan Ju",
+              CollegeProgram = "IT",
+              YearInProgram = "Junior",
+              Birthdate = new DateTime(2000, 02, 04)
           }
         );
     }
@@ -84,10 +92,26 @@ namespace FinalProject.Data
           new Hobby
           {
               Id = 3,
+              FullName = "Jeffrey Wallace",
+              FavoriteHobby = "Jeffrey Wallace",
+              SecondFavoriteHobby = "Jeffrey Wallace",
+              WhyYouLikeThem = "Jeffrey Wallace"
+          },
+          new Hobby
+          {
+              Id = 4,
               FullName = "Darrion Hoard",
               FavoriteHobby = "Cooking",
               SecondFavoriteHobby = "Jiu Jitsu",
               WhyYouLikeThem = "I love to eat and learning new submission points"
+          },
+          new Hobby
+          {
+              Id = 5,
+              FullName = "Bangyan Ju",
+              FavoriteHobby = "Cooking",
+              SecondFavoriteHobby = "Playing Computergames",
+              WhyYouLikeThem = "Cooking and playing games make me feel happy"
           }
         );
     }
@@ -135,6 +159,14 @@ namespace FinalProject.Data
                 CourseName = "Database Management II",
                 CourseID = "IT3045",
                 ProfessorName = "Professor D"
+            },
+            new Course
+            {
+                Id = 5,
+                FullName = "Bangyan Ju",
+                CourseName = "Database Management II",
+                CourseID = "IT3080",
+                ProfessorName = "Dyllon Dekok"
             }
           );
 

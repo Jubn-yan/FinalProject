@@ -62,10 +62,27 @@ namespace FinalProject.Migrations.Hobby
                         new
                         {
                             Id = 3,
+                            FavoriteHobby = "Jeffrey Wallace",
+                            FullName = "Jeffrey Wallace",
+                            SecondFavoriteHobby = "Jeffrey Wallace",
+                            WhyYouLikeThem = "I like being outside and staying active"
+                        },
+                        new
+                        {
+                            Id = 4,
                             FavoriteHobby = "Cooking",
                             FullName = "Darrion Hoard",
                             SecondFavoriteHobby = "Jiu Jitsu",
                             WhyYouLikeThem = "I love to eat and learning new submission points"
+                        },
+
+                        new
+                        {
+                            Id = 5,
+                            FavoriteHobby = "Cooking",
+                            FullName = "Bangyan Ju",
+                            SecondFavoriteHobby = "Playing Computergames",
+                            WhyYouLikeThem = "Cooking and playing games make me feel happy"
                         });
                 });
 #pragma warning restore 612, 618
